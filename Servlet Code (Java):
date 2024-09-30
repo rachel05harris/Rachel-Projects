@@ -1,0 +1,39 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+// This annotation defines the URL pattern to access this servlet (e.g., /MyServlet)
+@WebServlet("/MyServlet")
+public class MyServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    // Handles GET requests
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Sets the content type of the response to HTML
+        response.setContentType("text/html");
+
+        // Get the output stream to write the response to the client
+        PrintWriter out = response.getWriter();
+
+        // Write basic HTML content
+        out.println("<html>");
+
+        out.println("<head>");
+        out.println("<title>My Simple Website</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Welcome to My Simple Java Servlet Website</h1>");
+        out.println("<p>This is a basic website using Java Servlets.</p>");
+        out.println("<ul>");
+        out.println("<li>Item 1</li>");
+        out.println("<li>Item 2</li>");
+        out.println("<li>Item 3</li>");
+        out.println("</ul>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
