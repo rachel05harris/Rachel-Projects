@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Servlet Example</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p>This page links to a Java servlet that generates HTML.</p>
+
+    <!-- Link to the servlet -->
+    <a href="MyServlet">Go to the Servlet-generated page</a>
+</body>
+</html>
